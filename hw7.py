@@ -18,7 +18,6 @@ usernames['Steven'] = 'LoLCat'
 usernames['Zara'] = 'zanyZara'
 usernames['Renato'] = 'songDude'
 
-
 # setup counter to store menu choice
 menu_choice = 0
 
