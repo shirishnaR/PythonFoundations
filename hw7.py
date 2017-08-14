@@ -1,6 +1,13 @@
+#!/usr/bin/env python3
+
+'''
+ This is my Assignment-5 program
+ This program calculates the game day pizza requirements
+'''
+
 from sortedcontainers import SortedDict
 
-
+# function to show users options that they can chose from
 def print_menu():
     print('1. Print Users')
     print('2. Add a User')
@@ -47,16 +54,21 @@ while menu_choice != 5:
         print("Remove User")
         name = input("Name: ")
         if name in usernames:
-            pass  # delete that entry
+            del usernames[name]  # delete that entry
 
     # view user name
     elif menu_choice == 4:
         print("Lookup User")
         name = input("Name: ")
+
+
         if name in usernames:
-            pass  # print the username
+            try:
+                print("Username: {}".format(usernames[name]))  # print the username
+            except TypeError:
+                print("unprintable object")
         else:
-            pass  # print username not found
+            print("Username not found in the list")  # print username not found
 
     # is user enters something strange, show them the menu
     elif menu_choice != 5:
